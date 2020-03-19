@@ -16,19 +16,27 @@ _EOT_
 exit 1
 }
 
+function version() {
+    echo "$(basename ${0}) version 0.0.1 "
+}    
+
 ARG_P='./'
 
 if [ "$OPTIND" = 1 ]; then
-  while getopts p:h OPT
+  while getopts p:hv OPT
   do
     case $OPT in
       p)
-        ARG_P+=$OPTARG
-        # echo "ARG_P is $ARG_P"              
+        ARG_P+=$OPTARG           
         ;;
       h)
         echo "h option. display help"       
         usage
+        exit 0
+        ;;
+      v)      
+        version
+        exit 0
         ;;
       \?)
         echo "Try to enter the h option." 1>&2
