@@ -10,6 +10,7 @@ Description:
 
 Options:
   -p    アップロードのパスを指定する
+  -v    バージョンを参照する
   -h    ヘルプを参照する
 
 _EOT_
