@@ -11,4 +11,10 @@
 ```
 go get github.com/google/skicka
 go build github.com/google/skicka
+
+export GOPATH=/Users/$USER/go
+export PATH=$GOPATH/bin:$PATH
 ```
+次に端末で`scicka init` とし、client id, client secretを取得するのだが、今現在(2020/03/19)このコマンドでは
+ブラウザ上でのログインができない。よって[ここ](https://qiita.com/satackey/items/34c7fc5bf77bd2f5c633)を参考にしてskickaとGoogle ドライブを紐付ける。
+
